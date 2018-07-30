@@ -1,0 +1,50 @@
+<html>
+  <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  </head>
+  <body>
+      <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+  
+  <div id="id01" class="modal">
+    
+    <form  class="modal-content animate"  #lgForm="ngForm" (ngSubmit)="loginSubmit(lgForm.value)">
+
+        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close">&times;</span>
+  
+      <div class="imgcontainer">
+         
+          <select id = "myList">
+            <option value = "1">English</option>
+            <option value = "2">German</option>
+            <option value = "3">Spanish</option>
+            <option value = "4">French</option>
+          </select>
+        
+     
+      </div>
+     
+      <div class="container">
+        <label for="username"><b>Username</b></label>
+       
+        <input type="text" #username name="username" ngModel class="form-control" placeholder="Username" required >
+  
+        <label for="password"><b>Password</b></label>
+        <div class="loginRow"><input type="password" #password name="password" ngModel class="form-control" placeholder="Password" required  /></div>
+        <div class="container">
+        <span class="psw">Forgot <a href="#">password?</a></span>
+        <label class="checkbox">
+            <input type="checkbox" checked="checked" name="remember"> Keep me login for 30 days
+          </label>
+        </div>
+        <button type="submit">Login</button>
+      </div>
+  
+      <div class="container" style="background-color:#f1f1f1">
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+        <span class="acc">Need an account? <a href="#">Sign Up</a></span>
+      </div>
+    </form>
+  </div>
+  </body>
+   </html>
